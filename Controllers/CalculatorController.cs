@@ -24,9 +24,9 @@ namespace Dummy.Controllers
         // GET: api/Calculator/Concat?a=hello&b=123
         [HttpGet]
         [Route("api/Calculator/Concat")]
-        public IHttpActionResult Concat(int sampleNumber, string sampleString)
+        public IHttpActionResult Concat(int sampleNumber)
         {
-            var result = _calculatorService.Concat(sampleNumber, sampleString);
+            var result = _calculatorService.Concat(sampleNumber);
             return Ok(result);
         }
 
