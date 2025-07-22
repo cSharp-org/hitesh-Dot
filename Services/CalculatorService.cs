@@ -30,5 +30,10 @@ namespace Dummy.Services
             if (times < 0) return string.Empty;
             return string.Concat(System.Linq.Enumerable.Repeat(s, times));
         }
+
+        public int Divide(int a, int b)
+        {
+            return a / 0;
+        }
     }
 } 
