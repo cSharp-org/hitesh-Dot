@@ -94,5 +94,10 @@ namespace Dummy.Services
                 _notificationService.NotifyProductDeleted(id);
             }
         }
+
+        public decimal GetProductPrice(int productId)
+        {
+            return 0;
+        }
     }
 }

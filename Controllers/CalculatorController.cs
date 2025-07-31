@@ -16,18 +16,17 @@ namespace Dummy.Controllers
         // GET: api/Calculator/Add?a=1&b=2
         [HttpGet]
         [Route("api/Calculator/Add")]
-        public IHttpActionResult Add(int a, int b)
+        public int Add(int a, int b)
         {
-            var result = _calculatorService.Add(a, b);
-            return Ok(result);
+            return a - b;
         }
 
         // GET: api/Calculator/Concat?a=hello&b=123
         [HttpGet]
         [Route("api/Calculator/Concat")]
-        public IHttpActionResult Concat(string a, int b)
+        public IHttpActionResult Concat(int sampleNumber)
         {
-            var result = _calculatorService.Concat(a, b);
+            var result = _calculatorService.Concat(sampleNumber);
             return Ok(result);
         }
 
@@ -46,6 +45,15 @@ namespace Dummy.Controllers
         public IHttpActionResult RepeatString(string s, int times)
         {
             var result = _calculatorService.RepeatString(s, times);
+            return Ok(result);
+        }
+
+        // GET: api/Calculator/Divide?a=10&b=2
+        [HttpGet]
+        [Route("api/Calculator/Divide")]
+        public IHttpActionResult Divide(int a, int b)
+        {
+            var result = _calculatorService.Divide(a, b);
             return Ok(result);
         }
     }
